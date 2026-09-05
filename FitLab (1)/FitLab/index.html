@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Que se vea bien en celular-->
+    <title>Home - FitLab</title>
+    <link rel="stylesheet" href="css/estilos.css"> <!--Conexion con carpeta-->
+    <link rel="icon" type="img/jpeg" href="img/favicon.jpeg">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado-interno">
+            <a href="index.html" class="logo">
+                <img src="img/favicon.jpeg" alt="" width="28" height="28">FitLab</a>
+            <nav class="nav-principal" aria-label="Navegacion principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="acciones-encabezado">
+                <a href="login.html" class="enlace-cuenta">Iniciar Sesion</a>
+                <a href="registro.html" class="enlace-cuenta">Registrarse</a>
+                <a href="carrito.html" class="enlace-carrito" aria-label="Ver carrito">
+                    Carrito (<span id="contador-carrito">0</span>)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor pagina">
+        <section class="banner">
+            <div class="banner-texto">
+                <h1>Suplementos Deportivos, Supera tus limites!</h1>
+                <p>Proteinas, equipamiento y ropa deportiva para llevar tus entrenamientos al siguiente nivel.</p>
+                <a href="productos.html" class="boton boton-primario">Ver Productos</a>
+            </div>
+            <img src="img/deportista-equipamiento.jpeg" class="banner-imagen">
+        </section>
+
+        <section class="destacados">
+            <h2>Mas vendidos</h2>
+            <div class="grilla-productos" id="grilla-destacados">
+                <p>Aqui insertaremos con JS</p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>FitLab2026. Todos los derechos reservados</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
