@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Que se vea bien en celular-->
+    <title> Productos - FitLab</title>
+    <link rel="stylesheet" href="css/estilos.css"> <!--Conexion con carpeta-->
+    <link rel="icon" type="img/jpeg" href="img/favicon.jpeg">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado-interno">
+            <a href="index.html" class="logo">
+                <img src="img/favicon.jpeg" alt="" width="28" height="28">FitLab</a>
+            <nav class="nav-principal" aria-label="Navegacion principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="acciones-encabezado">
+                <a href="login.html" class="enlace-cuenta">Iniciar Sesion</a>
+                <a href="registro.html" class="enlace-cuenta">Registrarse</a>
+                <a href="carrito.html" class="enlace-carrito" aria-label="Ver carrito">
+                    Carrito (<span id="contador-carrito">0</span>)
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="contenedor pagina">
+        <section class="productos-seccion">
+            <h1>Nuestros productos</h1>
+            <p>¡Supera tus límites con Fitlab!</p>
+            <div class="grilla-productos" id="productosGrid">
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>FitLab2026. Todos los derechos reservados</p>
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function mostrarProductos(){
+            var principal = document.getElementById('productosGrid');
+            var codProductos = '';
+            for (var i = 0; 
+                i <productos_catalogo.length; i++) {
+                    var p= productos_catalogo[i];
+                    codProductos = codProductos + '<div class="producto-card">' +
+                        '<img src="'+ p.imagen + '" alt="'+p.nombre+'">'+
+                        '<h3>'+p.nombre+'</h3>'+
+                        '<p class="precio">$'+ p.precio.toLocaleString('es-CL')+'</p>'+
+                        '<p>Stock: '+p.stock+'</p>'+
+                        '<button>Ver Detalles</button>'+
+                        '<button>Agregar al Carrito</button>'+
+                            '</div>';
+                }
+                principal.innerHTML= codProductos;
+             }
+             mostrarProductos();
+    </script>
+</body>
