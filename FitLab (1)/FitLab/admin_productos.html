@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLab - Mantenedor de Productos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado-interno">
+            <a href="index.html" class="logo">
+                🏋️‍♂️ FitLab Admin
+            </a>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="admin_dashboard.html">Dashboard</a></li>
+                    <li><a href="admin_productos.html" style="color: #f2f1ed;">Gestión Productos</a></li>
+                </ul>
+            </nav>
+            <div class="acciones-encabezado">
+                <a href="index.html" class="enlace-carrito">🛒 Ver Tienda</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pagina contenedor">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+                <h1>Gestión de Productos</h1>
+                <p>Administración de inventario, catálogo y alertas de stock.</p>
+            </div>
+            <button id="btn-nuevo-producto" class="boton boton-primario">+ Agregar Producto</button>
+        </div>
+
+        <div id="banner-alerta-stock" class="alerta-stock hidden">
+            ⚠️ <strong>ALERTA DE INVENTARIO:</strong> Se detectaron productos con stock igual o menor al umbral crítico.
+        </div>
+
+        <section class="tarjeta-admin">
+            <h2>Catálogo General</h2>
+            <div class="tabla-contenedor">
+                <table class="tabla-custom">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Stock Crítico</th>
+                            <th>Estado</th>
+                            <th style="text-align: center;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-productos-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="seccion-formulario" class="tarjeta-admin hidden">
+            <h2 id="form-titulo">Formulario de Producto</h2>
+            <form id="form-producto" novalidate>
+                <input type="hidden" id="prod-index">
+
+                <div class="grilla-formulario">
+                    <div class="grupo-formulario">
+                        <label for="prod-codigo">Código *</label>
+                        <input type="text" id="prod-codigo" placeholder="Ej: PROT-001">
+                        <span class="mensaje-error" id="err-codigo"></span>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="prod-nombre">Nombre del Producto *</label>
+                        <input type="text" id="prod-nombre" placeholder="Ej: Whey Protein 1kg">
+                        <span class="mensaje-error" id="err-nombre"></span>
+                    </div>
+                </div>
+
+                <div class="grilla-formulario">
+                    <div class="grupo-formulario">
+                        <label for="prod-categoria">Categoría *</label>
+                        <select id="prod-categoria">
+                            <option value="">-- Seleccione Categoría --</option>
+                            <option value="Proteínas y suplementos">Proteínas y suplementos</option>
+                            <option value="Equipamiento">Equipamiento</option>
+                            <option value="Ropa Deportiva">Ropa Deportiva</option>
+                        </select>
+                        <span class="mensaje-error" id="err-categoria"></span>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="prod-precio">Precio ($) *</label>
+                        <input type="number" id="prod-precio" placeholder="29990">
+                        <span class="mensaje-error" id="err-precio"></span>
+                    </div>
+                </div>
+
+                <div class="grilla-formulario">
+                    <div class="grupo-formulario">
+                        <label for="prod-stock">Stock Actual *</label>
+                        <input type="number" id="prod-stock" placeholder="10">
+                        <span class="mensaje-error" id="err-stock"></span>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="prod-stock-critico">Stock Crítico</label>
+                        <input type="number" id="prod-stock-critico" placeholder="5">
+                        <span class="mensaje-error" id="err-stock-critico"></span>
+                    </div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="prod-descripcion">Descripción Corta</label>
+                    <textarea id="prod-descripcion" rows="3" placeholder="Detalles sobre el producto..."></textarea>
+                    <span class="mensaje-error" id="err-descripcion"></span>
+                </div>
+
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <button type="submit" class="boton boton-primario">Guardar Producto</button>
+                    <button type="button" id="btn-cancelar" class="boton">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>&copy; 2026 FitLab. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

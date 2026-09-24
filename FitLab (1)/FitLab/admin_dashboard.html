@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLab - Dashboard Administrador</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado-interno">
+            <a href="index.html" class="logo">
+                🏋️‍♂️ FitLab Admin
+            </a>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="admin_dashboard.html" style="color: #f2f1ed;">Dashboard</a></li>
+                    <li><a href="admin_productos.html">Gestión Productos</a></li>
+                </ul>
+            </nav>
+            <div class="acciones-encabezado">
+                <a href="index.html" class="enlace-carrito">🛒 Ver Tienda</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pagina contenedor">
+        <h1>Dashboard General</h1>
+        <p>Resumen y métricas principales de inventario.</p>
+
+        <section class="grilla-dashboard">
+            <div class="metrica-card">
+                <h3>Total de Productos</h3>
+                <p id="total-productos-count">0</p>
+            </div>
+
+            <div class="metrica-card alerta">
+                <h3>Alertas de Stock Crítico</h3>
+                <p id="stock-critico-count" style="color: #e5484d;">0</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>&copy; 2026 FitLab. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
