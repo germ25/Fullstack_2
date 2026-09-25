@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title> Productos - FitLab</title>
-    <link rel="stylesheet" href="css/estilos.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - FitLab</title>
+    <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" type="img/jpeg" href="img/favicon.jpeg">
 </head>
-<body>
 
+<body>
     <header class="encabezado">
         <div class="contenedor encabezado-interno">
             <a href="index.html" class="logo">
-                <img src="img/favicon.jpeg" alt="" width="28" height="28">FitLab</a>
+                <img src="img/favicon.jpeg" alt="" width="28" height="28">FitLab
+            </a>
             <nav class="nav-principal" aria-label="Navegacion principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -34,11 +35,17 @@
     </header>
 
     <main class="contenedor pagina">
-        <section class="productos-seccion">
-            <h1>Nuestros productos</h1>
-            <p>¡Supera tus límites con Fitlab!</p>
-            <div class="grilla-productos" id="productosGrid">
-
+        <section class="carrito-seccion">
+            <h1>Tu Carrito</h1>
+            
+            <div class="carrito-wrapper">
+                <div id="carritoContainer" class="carrito-items">
+                    <!-- Los items se cargan aquí -->
+                </div>
+                
+                <div id="resumenCarrito" class="carrito-resumen">
+                    <!-- El resumen se carga aquí -->
+                </div>
             </div>
         </section>
     </main>
@@ -52,6 +59,5 @@
     <!-- SCRIPTS -->
     <script src="js/config.js"></script>
     <script src="js/carrito.js"></script>
-    <script src="js/productos.js"></script>
 </body>
 </html>

@@ -41,8 +41,7 @@ function validarContacto(event) {
     } else {
         errorCorreo.textContent = "";
     }
-
-    // --- Comentario: requerido, maximo 500 caracteres ---
+    
     const comentario = document.getElementById("comentario");
     const errorComentario = document.getElementById("error-comentario");
     if (comentario.value.trim() === "") {
